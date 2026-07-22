@@ -9,6 +9,9 @@ description = "git blame for AI runs"
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
+authors = [
+    { name = "Rudra Patra", email = "rudran.patra@yahoo.com" },
+]
 keywords = ["agent", "ai", "diff", "trace", "observability"]
 classifiers = [
     "Development Status :: 3 - Alpha",
