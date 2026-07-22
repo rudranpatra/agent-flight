@@ -1,0 +1,68 @@
+{
+  "version": "flight/v1",
+  "run_id": "t4-good",
+  "model": "gpt-4o",
+  "events": [
+    {
+      "seq": 1,
+      "type": "llm",
+      "input": "system: You are a coding agent.\nuser: Fix the authentication bug in auth.py",
+      "output": "Start."
+    },
+    {
+      "seq": 2,
+      "type": "tool",
+      "name": "step_0",
+      "input": "{\"i\": 0}",
+      "output": "ok"
+    },
+    {
+      "seq": 3,
+      "type": "tool",
+      "name": "step_1",
+      "input": "{\"i\": 1}",
+      "output": "ok"
+    },
+    {
+      "seq": 4,
+      "type": "tool",
+      "name": "step_2",
+      "input": "{\"i\": 2}",
+      "output": "ok"
+    },
+    {
+      "seq": 5,
+      "type": "tool",
+      "name": "step_3",
+      "input": "{\"i\": 3}",
+      "output": "ok"
+    },
+    {
+      "seq": 6,
+      "type": "tool",
+      "name": "step_4",
+      "input": "{\"i\": 4}",
+      "output": "ok"
+    },
+    {
+      "seq": 7,
+      "type": "tool",
+      "name": "step_5",
+      "input": "{\"i\": 5}",
+      "output": "ok"
+    },
+    {
+      "seq": 8,
+      "type": "tool",
+      "name": "charge_customer",
+      "input": "{\"customer_id\": 123}",
+      "output": "ok"
+    },
+    {
+      "seq": 9,
+      "type": "llm",
+      "input": "system: You are a coding agent.\nuser: Fix the authentication bug in auth.py",
+      "output": "Complete."
+    }
+  ]
+}

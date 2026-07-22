@@ -1,0 +1,10 @@
+{
+  "version": "flight/v1",
+  "run_id": "t3-bad",
+  "model": "gpt-4o",
+  "events": [
+    {"seq": 1, "type": "llm", "input": "system: You are a coding agent.\nuser: Fix the authentication bug in auth.py", "output": "Query the DB."},
+    {"seq": 2, "type": "tool", "name": "database_query", "input": "{\"sql\": \"SELECT * FROM users\"}", "output": "ERROR: statement timeout"},
+    {"seq": 3, "type": "llm", "input": "system: You are a coding agent.\nuser: Fix the authentication bug in auth.py", "output": "Retrying."}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": "flight/v1",
+  "run_id": "t1-bad",
+  "model": "gpt-4o-mini",
+  "events": [
+    {"seq": 1, "type": "llm", "input": "system: You are a coding agent.\nuser: Fix the authentication bug in auth.py", "output": "I'll read auth.py first."},
+    {"seq": 2, "type": "tool", "name": "read_file", "input": "{\"path\": \"auth.py\"}", "output": "def verify(t): return t.exp > now()"},
+    {"seq": 3, "type": "llm", "input": "system: You are a coding agent.\nuser: Fix the authentication bug in auth.py", "output": "Looks fine, no change needed."},
+    {"seq": 4, "type": "tool", "name": "run_tests", "input": "{}", "output": "FAILED: token expired"}
+  ]
+}

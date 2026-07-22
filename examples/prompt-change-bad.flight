@@ -1,0 +1,34 @@
+{
+  "version": "flight/v1",
+  "run_id": "t2-bad",
+  "model": "gpt-4o",
+  "events": [
+    {
+      "seq": 1,
+      "type": "llm",
+      "input": "system: You are a coding agent. Be more secure.\nuser: Fix the authentication bug in auth.py",
+      "output": "Reading file."
+    },
+    {
+      "seq": 2,
+      "type": "tool",
+      "name": "read_file",
+      "input": "{\"path\": \"auth.py\"}",
+      "output": "..."
+    },
+    {
+      "seq": 3,
+      "type": "tool",
+      "name": "edit_file",
+      "input": "{\"patch\": \"fix expiry AND rotate secret\"}",
+      "output": "error: secret store locked"
+    },
+    {
+      "seq": 4,
+      "type": "tool",
+      "name": "run_tests",
+      "input": "{}",
+      "output": "FAILED: cannot connect"
+    }
+  ]
+}

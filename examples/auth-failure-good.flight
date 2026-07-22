@@ -1,0 +1,26 @@
+{
+  "version": "flight/v1",
+  "run_id": "t5-good",
+  "model": "gpt-4o",
+  "events": [
+    {
+      "seq": 1,
+      "type": "llm",
+      "input": "system: You are a coding agent.\nuser: Fix the authentication bug in auth.py",
+      "output": "Look up the customer."
+    },
+    {
+      "seq": 2,
+      "type": "tool",
+      "name": "search_customer",
+      "input": "{\"id\": 123}",
+      "output": "customer found: active"
+    },
+    {
+      "seq": 3,
+      "type": "llm",
+      "input": "system: You are a coding agent.\nuser: Fix the authentication bug in auth.py",
+      "output": "Proceeding."
+    }
+  ]
+}
